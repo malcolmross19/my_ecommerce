@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private data: DataService,
     private rest: RestApiService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -55,6 +55,5 @@ export class ProductComponent implements OnInit {
     } catch (error) {
       this.data.error(error['message']);
     }
-    this.btnDisabled = false;
   }
 }
