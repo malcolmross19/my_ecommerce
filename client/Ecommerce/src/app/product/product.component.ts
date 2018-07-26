@@ -55,5 +55,12 @@ export class ProductComponent implements OnInit {
     } catch (error) {
       this.data.error(error['message']);
     }
+    this.btnDisabled = false;
+  }
+
+  addToCart() {
+    this.data.addToCart(this.product)
+      ? this.data.success('Product successfully added to cart.')
+      : this.data.error('Product has already been added to cart.');
   }
 }
